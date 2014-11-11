@@ -339,6 +339,9 @@ angular.module('angularChart', [])
               }
             };
 
+            // Line
+            //
+            scope.configuration.line = scope.options.line;
 
             // Draw chart
             //

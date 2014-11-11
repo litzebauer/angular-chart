@@ -913,6 +913,25 @@ describe('angularChart:', function () {
 
         });
 
+        describe('. line', function() {
+          it('- Line configuration should not be set by default', function() {
+            expect(elementScope.configuration.line).not.toBeDefined();
+          });
+
+          it('- Line configuration should be set when option specified', function() {
+            expect(elementScope.configuration.line).not.toBeDefined();
+
+            $scope.options.line = {
+              connect: {
+                null: true
+              }
+            };
+            $scope.$apply();
+
+            expect(elementScope.configuration.line).toBe($scope.options.line);
+          });
+        });
+
       });
 
       describe('. subchart', function () {
